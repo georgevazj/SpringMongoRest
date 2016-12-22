@@ -61,6 +61,3 @@ hs_err_pid*
 .gitignore
 .idea/
 SpringMongoRest.iml
-pom.xml
-src/
-target/
