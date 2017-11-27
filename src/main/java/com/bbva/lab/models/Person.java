@@ -2,6 +2,7 @@ package com.bbva.lab.models;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 /**
  * Created by jorge on 22/12/2016.
