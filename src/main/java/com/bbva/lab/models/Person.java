@@ -1,10 +1,13 @@
 package com.bbva.lab.models;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Created by jorge on 22/12/2016.
  */
+
+@Document
 public class Person {
 
     @Id
