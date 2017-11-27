@@ -12,14 +12,15 @@ public class Person {
 
     @Id
     private String id;
-    private String createdAt;
+    private long createdAt;
     private Data data;
-    private int offset;
+    private Integer offset;
 
     public Person() {
     }
 
-    public Person(String id, String createdAt, Data data, int offset) {
+
+    public Person(String id, long createdAt, Data data, Integer offset) {
         this.id = id;
         this.createdAt = createdAt;
         this.data = data;
@@ -34,11 +35,11 @@ public class Person {
         this.id = id;
     }
 
-    public String getCreatedAt() {
+    public long getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(String createdAt) {
+    public void setCreatedAt(long createdAt) {
         this.createdAt = createdAt;
     }
 
@@ -50,11 +51,11 @@ public class Person {
         this.data = data;
     }
 
-    public int getOffset() {
+    public Integer getOffset() {
         return offset;
     }
 
-    public void setOffset(int offset) {
+    public void setOffset(Integer offset) {
         this.offset = offset;
     }
 
@@ -62,7 +63,7 @@ public class Person {
     public String toString() {
         return "Person{" +
                 "id='" + id + '\'' +
-                ", createdAt='" + createdAt + '\'' +
+                ", createdAt=" + createdAt +
                 ", data=" + data +
                 ", offset=" + offset +
                 '}';

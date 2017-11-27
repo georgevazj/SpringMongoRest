@@ -1,18 +1,22 @@
 package com.bbva.lab.models;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  * Created by Jorge on 27/11/17.
  */
+
+@Document
 public class Address {
 
     private String full;
     private GeoLocation geolocation;
-    private int zipCode;
+    private String zipCode;
 
     public Address() {
     }
 
-    public Address(String full, GeoLocation geolocation, int zipCode) {
+    public Address(String full, GeoLocation geolocation, String zipCode) {
         this.full = full;
         this.geolocation = geolocation;
         this.zipCode = zipCode;
@@ -34,11 +38,11 @@ public class Address {
         this.geolocation = geolocation;
     }
 
-    public int getZipCode() {
+    public String getZipCode() {
         return zipCode;
     }
 
-    public void setZipCode(int zipCode) {
+    public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
 
@@ -47,7 +51,7 @@ public class Address {
         return "Address{" +
                 "full='" + full + '\'' +
                 ", geolocation=" + geolocation +
-                ", zipCode=" + zipCode +
+                ", zipCode='" + zipCode + '\'' +
                 '}';
     }
 }

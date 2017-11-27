@@ -1,13 +1,17 @@
 package com.bbva.lab.models;
 
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  * Created by Jorge on 27/11/17.
  */
+
+@Document
 public class Data {
 
     private Address address;
-    private float balance;
+    private double balance;
     private String cellPhone;
     private String currency;
     private String date;
@@ -18,7 +22,7 @@ public class Data {
     public Data() {
     }
 
-    public Data(Address address, float balance, String cellPhone, String currency, String date, String name, int pan, String person) {
+    public Data(Address address, double balance, String cellPhone, String currency, String date, String name, int pan, String person) {
         this.address = address;
         this.balance = balance;
         this.cellPhone = cellPhone;
@@ -37,11 +41,11 @@ public class Data {
         this.address = address;
     }
 
-    public float getBalance() {
+    public double getBalance() {
         return balance;
     }
 
-    public void setBalance(float balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 

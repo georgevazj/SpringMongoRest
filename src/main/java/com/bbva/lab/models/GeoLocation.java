@@ -1,8 +1,12 @@
 package com.bbva.lab.models;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  * Created by Jorge on 27/11/17.
  */
+
+@Document
 public class GeoLocation {
 
     private String latitude;
