@@ -1,6 +1,5 @@
 package com.bbva.lab.models;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -17,16 +16,16 @@ public class Operation {
     private String id;
     private long createdAt;
     @Field("data")
-    private DataOperation dataOperation;
+    private DataOperation data;
     private int offset;
 
     public Operation() {
     }
 
-    public Operation(String id, long createdAt, DataOperation dataOperation, int offset) {
+    public Operation(String id, long createdAt, DataOperation data, int offset) {
         this.id = id;
         this.createdAt = createdAt;
-        this.dataOperation = dataOperation;
+        this.data = data;
         this.offset = offset;
     }
 
@@ -46,12 +45,12 @@ public class Operation {
         this.createdAt = createdAt;
     }
 
-    public DataOperation getDataOperation() {
-        return dataOperation;
+    public DataOperation getData() {
+        return data;
     }
 
-    public void setDataOperation(DataOperation dataOperation) {
-        this.dataOperation = dataOperation;
+    public void setData(DataOperation data) {
+        this.data = data;
     }
 
     public int getOffset() {
@@ -67,7 +66,7 @@ public class Operation {
         return "Operation{" +
                 "id='" + id + '\'' +
                 ", createdAt=" + createdAt +
-                ", dataOperation=" + dataOperation +
+                ", data=" + data +
                 ", offset=" + offset +
                 '}';
     }
