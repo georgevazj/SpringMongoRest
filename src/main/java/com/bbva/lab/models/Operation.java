@@ -1,29 +1,32 @@
 package com.bbva.lab.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 /**
- * Created by jorge on 22/12/2016.
+ * Created by Administrador on 28/11/2017.
  */
 
-@Document(collection = "personas")
-public class Person {
+@Document(collection = "operaciones")
+public class Operation {
 
     @Id
+    @Field("_id")
     private String id;
     private long createdAt;
-    private DataPerson data;
-    private Integer offset;
+    @Field("data")
+    private DataOperation dataOperation;
+    private int offset;
 
-    public Person() {
+    public Operation() {
     }
 
-
-    public Person(String id, long createdAt, DataPerson data, Integer offset) {
+    public Operation(String id, long createdAt, DataOperation dataOperation, int offset) {
         this.id = id;
         this.createdAt = createdAt;
-        this.data = data;
+        this.dataOperation = dataOperation;
         this.offset = offset;
     }
 
@@ -43,28 +46,28 @@ public class Person {
         this.createdAt = createdAt;
     }
 
-    public DataPerson getData() {
-        return data;
+    public DataOperation getDataOperation() {
+        return dataOperation;
     }
 
-    public void setData(DataPerson data) {
-        this.data = data;
+    public void setDataOperation(DataOperation dataOperation) {
+        this.dataOperation = dataOperation;
     }
 
-    public Integer getOffset() {
+    public int getOffset() {
         return offset;
     }
 
-    public void setOffset(Integer offset) {
+    public void setOffset(int offset) {
         this.offset = offset;
     }
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Operation{" +
                 "id='" + id + '\'' +
                 ", createdAt=" + createdAt +
-                ", data=" + data +
+                ", dataOperation=" + dataOperation +
                 ", offset=" + offset +
                 '}';
     }

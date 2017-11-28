@@ -14,7 +14,9 @@ import java.util.List;
 @RepositoryRestResource(collectionResourceRel = "personas", path = "people")
 public interface PersonRepository extends MongoRepository<Person, String> {
 
-    List<Person> findById(@Param("id") String id);
-    List<Person> findByDataPan(@Param("pan") String pan);
+    Person findById(@Param("id") String id);
+    Person findByDataPan(@Param("pan") String pan);
+    Person findByDataCellPhone(@Param("cellphone") String cellphone);
+    Person findByDataName(@Param("name") String name);
 
 }

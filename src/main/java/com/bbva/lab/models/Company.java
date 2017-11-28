@@ -7,20 +7,20 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * Created by jorge on 22/12/2016.
  */
 
-@Document(collection = "personas")
-public class Person {
+@Document(collection = "empresas")
+public class Company {
 
     @Id
     private String id;
     private long createdAt;
-    private DataPerson data;
+    private DataCompany data;
     private Integer offset;
 
-    public Person() {
+    public Company() {
     }
 
 
-    public Person(String id, long createdAt, DataPerson data, Integer offset) {
+    public Company(String id, long createdAt, DataCompany data, Integer offset) {
         this.id = id;
         this.createdAt = createdAt;
         this.data = data;
@@ -43,11 +43,11 @@ public class Person {
         this.createdAt = createdAt;
     }
 
-    public DataPerson getData() {
+    public DataCompany getData() {
         return data;
     }
 
-    public void setData(DataPerson data) {
+    public void setData(DataCompany data) {
         this.data = data;
     }
 
@@ -61,7 +61,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Company{" +
                 "id='" + id + '\'' +
                 ", createdAt=" + createdAt +
                 ", data=" + data +

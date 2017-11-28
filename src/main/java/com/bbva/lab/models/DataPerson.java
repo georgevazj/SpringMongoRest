@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */
 
 @Document
-public class Data {
+public class DataPerson {
 
     private Address address;
     private double balance;
@@ -19,10 +19,10 @@ public class Data {
     private int pan;
     private String person;
 
-    public Data() {
+    public DataPerson() {
     }
 
-    public Data(Address address, double balance, String cellPhone, String currency, String date, String name, int pan, String person) {
+    public DataPerson(Address address, double balance, String cellPhone, String currency, String date, String name, int pan, String person) {
         this.address = address;
         this.balance = balance;
         this.cellPhone = cellPhone;
@@ -99,7 +99,7 @@ public class Data {
 
     @Override
     public String toString() {
-        return "Data{" +
+        return "DataPerson{" +
                 "address=" + address +
                 ", balance=" + balance +
                 ", cellPhone='" + cellPhone + '\'' +
